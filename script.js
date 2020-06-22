@@ -19,3 +19,17 @@ for (let year = 2014; year <= 2050; year++) {
         alert("error");
     };
 };
+
+//Open a new window
+function myFunction() {
+    var myWindow = window.open("", "myWindow", "width=300, height=400");
+    
+    //Write some text in the new window
+    myWindow.document.write("<p>This is the source window</p>", " AG Baby is your Daddy");
+    
+    //Write some text in the window that created the new window
+    myWindow.opener.document.write("<p>This is the source window!</p>");
+    }
+    
+    //gets the browser name
+    document.getElementById("demo").innerHTML = "The browser you're using is " + navigator.appCodeName;
