@@ -7,26 +7,34 @@
 <title>Search</title>
 </head>
 
+<style>
+
+form {
+     float: center;
+     border: 2px solid thistle ;
+     width: 300px;
+     height: 220px;
+     padding: 44px;
+     margin: 50px;
+     margin-left: 320px;
+}
+</style>
 
 <body>
+<!-- 
+<p id="demo"></p> -->
 
-     <h1> Hello World! </h1>
+<form>
+    <h3>Multiply or Divide your Asses</h3>
 
-     <button onclick="myFunction()">Try it</button>
-     
-     <h2>The Navigator Object</h2>
-     <!-- For the Type of Browser used -->
-     <!-- <p>The appCodeName property returns the code nameof the browser.</p> -->
-     
-     <!-- <p>Do not try to rely on it! "Mozilla" is the application code name for <br>
-         Chrome, Firefox, IE, Safari and Opera.</p> -->
-     
-         <p id="demo"></p>
-     
-     <p>The appVersion property returns version information about the browser.</p>
-     <br>
-          <p id="demo1"></p>
+     <p>1st number: <input type="text" id="p1"></p>
+     <p>2nd number: <input type="text" id="p2"></p>
 
+     <button id="multiply" onclick="multiplication();">Multiply</button>   <button id="divide" onclick="divison();">Divide</button>
+     <button id="add" onclick="addition();">Find the sum</button>          <button id="subtract" onclick="subtraction();">Subtract</button> 
+
+     <h5>The Result is:</h5> <p id="demo"></p>
+</form>
 <script src='script.js'></script>
 </body>
 </html>
