@@ -7,34 +7,19 @@
 <title>Search</title>
 </head>
 
-<style>
-
-form {
-     float: center;
-     border: 2px solid thistle ;
-     width: 300px;
-     height: 220px;
-     padding: 44px;
-     margin: 50px;
-     margin-left: 320px;
-}
-</style>
 
 <body>
-<!-- 
-<p id="demo"></p> -->
+     
+  <h3>Your followinng results have been graded.</h3>
+  <p> Put in your score an know your grade</p>
+  
+  <form>
+     <input type="number" placeholder="Insert a Number here" id="input" name="number">
 
-<form>
-    <h3>Multiply or Divide your Asses</h3>
+     <button id="button">Submit</button>
+  </form>   
+<p id="demo"></p>
 
-     <p>1st number: <input type="text" id="p1"></p>
-     <p>2nd number: <input type="text" id="p2"></p>
-
-     <button id="multiply" onclick="multiplication();">Multiply</button>   <button id="divide" onclick="divison();">Divide</button>
-     <button id="add" onclick="addition();">Find the sum</button>          <button id="subtract" onclick="subtraction();">Subtract</button> 
-
-     <h5>The Result is:</h5> <p id="demo"></p>
-</form>
 <script src='script.js'></script>
 </body>
 </html>
