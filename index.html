@@ -7,19 +7,25 @@
 <title>Search</title>
 </head>
 
+<style>
+    .container{
+      padding: 30px;
+      background-color: tomato;
+      color: white;
+      float: center;
+      width: 400px;
+      margin-left: 321px;
+      margin-top: 100px;
+    }
 
+</style>
 <body>
-     
-  <h3>Your followinng results have been graded.</h3>
-  <p> Put in your score an know your grade</p>
-  
-  <form>
-     <input type="number" placeholder="Insert a Number here" id="input" name="number">
+<div class="container">
+  <h3>What Day and Time is at wherever you are Right Now?</h3>
 
-     <button id="button">Submit</button>
-  </form>   
-<p id="demo"></p>
-
+  <h4 id="todayHTML"></h4>
+  <h4 id="timeHTML"></h4>
+</div>
 <script src='script.js'></script>
 </body>
 </html>
