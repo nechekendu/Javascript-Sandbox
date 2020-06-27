@@ -1,38 +1,10 @@
-let today = new Date();
-let day = today.getDate();
-let daylist = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-let bango = daylist[day];
+function animate_string(id) {
+  let element = document.querySelector("#target");
+  let textNode = element.childNodes[0]; //assuming no other children
+  let text = textNode.data;
 
-
-
-let hour = today.getHours();
-let minutes = today.getMinutes();
-let seconds = today.getSeconds();
-
-const prepand = (hour >= 12)?"PM ":" AM";
-hour = (hour >= 12)? hour - 12: hour;
-
-if(hour === 0 && prepand ===' PM ') {
-  if (minutes === 0 && seconds === 0) {
-    hour = 12;
-    prepand = " Noon";
-  } else {
-    hour = 12;
-    prepand = " PM ";
-  }
+  setInterval(function () {
+    text = text[text.length - 1] + text.substring(0, text.length - 1);
+    textNode.data = text;
+  }, 100);
 }
-if (hour === 0 && prepand === ' AM '){
-  if (minutes === 0 & seconds === 0) {
-    hour = 12;
-    prepand = " Midnight";
-  }else {
-    hour = 12;
-    prepand = " AM ";
-  }
-}
-
-const todayHTML = document.querySelector("#todayHTML");
-const timeHTML = document.querySelector("#timeHTML");
-
-todayHTML.innerHTML = `Today is ${bango}.`
-timeHTML.innerHTML = `The time is ${hour} ${prepand} ${minutes} ${seconds}`;
