@@ -1,10 +1,13 @@
-function animate_string(id) {
-  let element = document.querySelector("#target");
-  let textNode = element.childNodes[0]; //assuming no other children
-  let text = textNode.data;
 
-  setInterval(function () {
-    text = text[text.length - 1] + text.substring(0, text.length - 1);
-    textNode.data = text;
-  }, 100);
-}
+const form = document.forms.search;
+const input = form.elements.searchInput;
+
+input.addEventListener('focus', function(){
+  if (input.value==='Search Here') {
+  input.value = ''
+  }
+  }, false);
+  input.addEventListener('blur', function(){
+  if(input.value === '') {
+  input.value = 'Search Here';
+  } }, false);
